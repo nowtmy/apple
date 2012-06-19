@@ -16,6 +16,14 @@
 <body>
 
 <%= yield %>
+<div style="width: 400px; height: 400px "></div>
+<div style="clear: both"></div>
+<footer>
+  <% if current_user.present? %>
+      <%= link_to 'log out', '/users/sign_out'%>
+  <% end %>
+
+</footer>
 
 </body>
 </html>
